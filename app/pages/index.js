@@ -1,24 +1,9 @@
 import Head from 'next/head'
 import s from '../styles/Home.module.css'
-import fs from "fs";
-import path from "path";
 import { useEffect, useRef } from 'react';
 
-export async function getStaticProps() {
-  const ASSETS_PATH = path.join(process.cwd(), "../widget/build/asset-manifest.json");
-  const assetManifest = await fs.readFileSync(ASSETS_PATH, {encoding:'utf8', flag:'r'});
-
-  return {
-    props: {
-      assetManifest: JSON.parse(assetManifest)
-    }
-  }
-}
-
-
-export default function Home({ assetManifest }) {
+export default function Home() {
   const widgetRef = useRef(null);
-
   useEffect(() => {
     window.renderWidget(widgetRef.current)
   },[]);
@@ -28,7 +13,7 @@ export default function Home({ assetManifest }) {
       <Head>
         <title>pox</title>
         <link rel="icon" href="/favicon.ico" />
-        <script link="preload" src={`https://next-microfrontend-widget.vercel.app${assetManifest.files["main.js"]}`} />
+        <script link="preload" src={`https://next-microfrontend-widget.vercel.app/static/js/main.js`} />
       </Head>
       <main className={s.main}>
         <div className={s.content}>
