@@ -1,47 +1,47 @@
 {
   "rewrites": [
     {
-      "source": "massssssin.css",
+      "source": "v1/main.css",
       "destination": "/static/css/main.8c8b27cf.chunk.css"
     },
     {
-      "source": "main.js",
+      "source": "v1/main.js",
       "destination": "/static/js/main.3894f2ed.chunk.js"
     },
     {
-      "source": "main.js.map",
+      "source": "v1/main.js.map",
       "destination": "/static/js/main.3894f2ed.chunk.js.map"
     },
     {
-      "source": "runtime-main.js",
+      "source": "v1/runtime-main.js",
       "destination": "/static/js/runtime-main.97044c8d.js"
     },
     {
-      "source": "runtime-main.js.map",
+      "source": "v1/runtime-main.js.map",
       "destination": "/static/js/runtime-main.97044c8d.js.map"
     },
     {
-      "source": "static/js/2.52142c53.chunk.js",
+      "source": "v1/static/js/2.52142c53.chunk.js",
       "destination": "/static/js/2.52142c53.chunk.js"
     },
     {
-      "source": "static/js/2.52142c53.chunk.js.map",
+      "source": "v1/static/js/2.52142c53.chunk.js.map",
       "destination": "/static/js/2.52142c53.chunk.js.map"
     },
     {
-      "source": "index.html",
+      "source": "v1/index.html",
       "destination": "/index.html"
     },
     {
-      "source": "static/css/main.8c8b27cf.chunk.css.map",
+      "source": "v1/static/css/main.8c8b27cf.chunk.css.map",
       "destination": "/static/css/main.8c8b27cf.chunk.css.map"
     },
     {
-      "source": "static/js/2.52142c53.chunk.js.LICENSE.txt",
+      "source": "v1/static/js/2.52142c53.chunk.js.LICENSE.txt",
       "destination": "/static/js/2.52142c53.chunk.js.LICENSE.txt"
     },
     {
-      "source": "static/media/logo.6ce24c58.svg",
+      "source": "v1/static/media/logo.6ce24c58.svg",
       "destination": "/static/media/logo.6ce24c58.svg"
     }
   ]
