@@ -2,9 +2,11 @@ import Head from 'next/head'
 import s from '../styles/Home.module.css'
 import fs from "fs";
 import path from "path";
+import { useEffect, useRef } from 'react';
 
 export async function getStaticProps() {
-  const assetManifest = await fs.readFileSync(path.join(process.cwd(), "../widget/build/asset-manifest.json"),{encoding:'utf8', flag:'r'})
+  const ASSETS_PATH = path.join(process.cwd(), "../widget/build/asset-manifest.json");
+  const assetManifest = await fs.readFileSync(ASSETS_PATH, {encoding:'utf8', flag:'r'});
 
   return {
     props: {
@@ -13,12 +15,18 @@ export async function getStaticProps() {
   }
 }
 
-export default function Home({ assetManifest }) {
 
+export default function Home({ assetManifest }) {
+  const widgetRef = useRef(null);
+
+  useEffect(() => {
+    window.renderWidget(widgetRef.current)
+  },[]);
+  
   return (
     <div className={s.container}>
       <Head>
-        <title>next-microfrontneds</title>
+        <title>pox</title>
         <link rel="icon" href="/favicon.ico" />
         <script link="preload" src={`https://next-microfrontend-widget.vercel.app${assetManifest.files["main.js"]}`} />
       </Head>
@@ -28,9 +36,9 @@ export default function Home({ assetManifest }) {
             Local
           </div>
           <div className={s.row}>
-            <div className={s.external}></div>
-            <div className={s.external}></div>
-            <div className={s.external}></div>
+            <div className={s.external} />
+            <div className={s.external} />
+            <div className={s.external} ref={widgetRef}/>
           </div>
         </div>
       </main>
