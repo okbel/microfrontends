@@ -5,7 +5,7 @@ const { files } = require('../build/asset-manifest.json');
   // Parse and shape asset manifest
   const desideredVercelConfig = {
     rewrites: Object.entries(files).map(([key, value]) => ({
-      "source": key,
+      "source": `v1/${key}`,
       "destination": value
     }))
   }
