@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import s from '../styles/Home.module.css'
-import assetManifest from "../../widget/build/asset-manifest.json"
+import assetManifest from "../../widget/build/asset-manifest"
 
 export default function Home() {
   console.log(assetManifest)
