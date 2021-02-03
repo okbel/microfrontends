@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import s from '../styles/Home.module.css'
+import assetManifest from "../../widget/build/asset-manifest.json"
 
 export default function Home() {
+  console.log(assetManifest)
   return (
     <div className={s.container}>
       <Head>
