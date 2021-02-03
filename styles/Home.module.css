@@ -16,6 +16,43 @@
   align-items: center;
 }
 
+.content {
+  border-radius: 6px;
+  padding: 2rem;
+  border: 1px solid var(--accents-3);
+  background-color: var(--accents-2);
+}
+
+.row {
+  display: flex;
+}
+
+.row > *:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.local, .external {
+  border-radius: 6px;
+  padding: 2rem;
+  border: 1px solid var(--accents-5);
+  background-color: var(--accents-4);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .2ch;
+  font-size: 0.9rem;
+}
+
+.local {
+  border: 1px solid var(--accents-4);
+  background-color: var(--accents-3);
+  margin-bottom: 1rem;
+}
+
+.external {
+  width: 200px;
+  height: 200px;
+}
+
 .footer {
   width: 100%;
   height: 100px;
