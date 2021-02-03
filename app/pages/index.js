@@ -11,9 +11,10 @@ export default function Home() {
   return (
     <div className={s.container}>
       <Head>
-        <title>pox</title>
+        <title>next-microfrontend</title>
         <link rel="icon" href="/favicon.ico" />
-        <script link="preload" src={`https://next-microfrontend-widget.vercel.app/static/js/main.js`} />
+        <link rel="stylesheet" href="https://next-microfrontend-widget.vercel.app/static/css/main.css" />
+        <script link="preload" src="https://next-microfrontend-widget.vercel.app/static/js/main.js" />
       </Head>
       <main className={s.main}>
         <div className={s.content}>
